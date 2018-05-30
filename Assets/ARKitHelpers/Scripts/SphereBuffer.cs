@@ -14,7 +14,8 @@ public class SphereBuffer : MonoBehaviour {
   private int currentSphere = 0;
 
 
-	// Use this for initialization
+
+	// Create a bunch of spheres whose positions we can set
 	void Start () {
 
     spheres = new GameObject[maxSpheres];
@@ -31,6 +32,8 @@ public class SphereBuffer : MonoBehaviour {
 	}
 
 
+  // A public functino that you can use to set a new sphere
+  // at a specific position
   public void SetSphere( Vector3 position ){
 
     spheres[ currentSphere ].transform.position = position;

@@ -19,6 +19,7 @@ public class StealCamTextures : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+    // Get the camera textures from our unity clear material
     mat = GetComponent<Renderer>().material;
     mat.SetTexture( "_vidTexY" , video.m_ClearMaterial.GetTexture( "_textureY" ) );
     mat.SetTexture( "_vidTexCBCR" , video.m_ClearMaterial.GetTexture( "_textureCbCr" ));

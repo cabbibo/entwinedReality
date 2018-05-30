@@ -69,7 +69,10 @@
 				float3 finalCameraTexture = mul(ycbcrToRGBTransform, ycbcr).rgb;
 
 
+				// Take the information from the camera texture and replace it with something new!
 				finalCameraTexture = pow( (length( finalCameraTexture )/3) , 3) * 3;
+
+				
  			  return float4( finalCameraTexture , 1);
 
  			  

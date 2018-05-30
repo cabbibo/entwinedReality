@@ -4,27 +4,18 @@ using UnityEngine;
 
 public class TouchPlacer : MonoBehaviour {
 
-
   public Transform toCopy;
   public SphereBuffer buffer;
   public FingerDown  down;
 
-	// Use this for initialization
+	// Using our sphere buffer to place new spheres!
 	void Start () {
-		
-
     down.OnDown.AddListener(Down);
 	}
 	
 
   void Down( float down, float moving, float x, float y ){
-    print("hmm");
     buffer.SetSphere( toCopy.position + toCopy.forward * .1f );
   }
 
-
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

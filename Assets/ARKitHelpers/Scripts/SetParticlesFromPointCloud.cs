@@ -23,6 +23,7 @@ public class SetParticlesFromPointCloud : MonoBehaviour {
 	}
 
 
+  // When we have new points, go through and set every positions and color of all of the particles in the particle system
   void NewPoints( Vector3[] fullPoints, int numNew , int currentID,  int total){
 
     for( int i = 0; i < numNew; i++ ){
@@ -30,12 +31,9 @@ public class SetParticlesFromPointCloud : MonoBehaviour {
       int fID = currentID-i;
       if( fID < 0){ fID += total; }
 
-
       particles[fID].position = fullPoints[fID];
-      particles[fID].startColor = Color.HSVToRGB((float)(fID)/ total, 1, 1);//new Color (1.0f, 1.0f, 1.0f);
+      particles[fID].startColor = Color.HSVToRGB((float)(fID)/ total, 1, 1);
       particles[fID].startSize = particleSize;
-
-
     
     }
 

@@ -24,50 +24,45 @@ public class ConnectToClosest : MonoBehaviour {
 
   public void SetClosest( Vector3[] points ){
 
-    print( points.Length );
-
-
     Vector3 closest = points[0];
 
     float closestDistance = 0;
 
-
-
+    // will need 2 points to represent every line
     for( int i = 0; i < (closestPoints.Length/2); i++){
 
       Vector3 p1;
       Vector3 p2;
       float minDistance = 100000;
 
+      // Check the distance to each point
       for( int j = 0; j < points.Length; j++ ){
 
         p1 = points[j];
-        p2 = transform.position;//closestPoints[i*2+0];
+        p2 = transform.position;
 
         float d = (p1-p2).magnitude;
 
+        // If its smalled than the current smallest distance, 
+        // but greater than the biggest distance, set our position
         if( d < minDistance && d > closestDistance ){
-
-          print(d);
-          print(points[j]);
           minDistance = d;
-
           closest = points[j];
         }
 
       }
 
-
+      // Set our new closest distance, for next iteration
       closestDistance = minDistance;
+
+      // Set the positions for the line renderer
       closestPoints[i * 2 + 0] = closest;
       closestPoints[i * 2 + 1] = transform.position;
 
     }
 
+    lr.SetPositions( closestPoints );
 
-    //for( int i = 0; i < lr.positionCount; i++ ){
-      lr.SetPositions( closestPoints );
-    //}
 
   }
 

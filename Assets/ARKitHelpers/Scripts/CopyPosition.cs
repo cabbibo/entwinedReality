@@ -6,27 +6,21 @@ public class CopyPosition : MonoBehaviour {
 
   public GameObject toCopy;
   public FingerDown fingerDown;
-
-
+  
   public float forwardOffset;
 
 
-	// Use this for initialization
+	// Listen for finger down
 	void Start () {
 		fingerDown.OnDown.AddListener(OnDown);
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
+
+  // Every time we press down, set out objects position with whatever
+  // forward offset we choose
   void OnDown( float down, float moving, float xPos , float yPos ){
-
-    print( "hello");
     transform.position = toCopy.transform.position + toCopy.transform.forward * forwardOffset;
-
-
   }
 
 }
