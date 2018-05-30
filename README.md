@@ -4,11 +4,13 @@ You can download the unity package
 
 
 [HERE][link]
-
-
 [link]: <https://drive.google.com/open?id=1CpfeV8_On3Aj-1Ue6fodhsYjLfSYgPY5>
 
-   [dill]: <https://github.com/joemccann/dillinger>
+During the workshops we discussed different things we would want to create with ARKit. You can check out the ideas here:
+
+[Workshop #1]:[ws1]
+[ws1]:<https://docs.google.com/document/d/1qrQJtjJdXTnvDQdBl3MiH1clFtt2ucxguc-Oc9Jx8a8/edit?usp=sharing>
+
 In this code we will be examing the parts of the iOS ARKit data that is NOT flat plane information.
 
 The 3 types of data we will be looking at are:
@@ -38,4 +40,3 @@ Lastly we have a scene that tries to combine all these different types of data i
 Isaac Cohen
 @cabbibo
 hello@cabbi.bo
-[PlDb]: <https://github.com/joemccann/dillinger/tree/master/plugins/dropbox/README.md>
